@@ -17,6 +17,9 @@ export const components: Components = {
 	listItem: ListItem
 };
 
-export const extensions = [gfm()];
+export const extensions: import('micromark-util-types').Extension[] = [gfm()];
 
-export const mdastExtensions = [gfmFromMarkdown(), imputeHeadingIds()];
+export const mdastExtensions: (
+	| import('mdast-util-from-markdown').Extension
+	| import('mdast-util-from-markdown').Extension[]
+)[] = [gfmFromMarkdown(), imputeHeadingIds()];

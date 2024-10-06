@@ -1,1 +1,1 @@
-export * as mdastGfm from './defaults/mdast-gfm.js';
+export * as mdastGfm from './exports/mdast-gfm.js';

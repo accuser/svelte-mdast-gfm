@@ -52,14 +52,14 @@
 	},
 	"dependencies": {
 		"@accuser/mdast-util-type-guards": "^1.2.0",
-		"@accuser/svelte-mdast": "^0.4.1",
 		"@accuser/svelte-unist": "^0.5.0",
 		"@types/mdast": "^4.0.4",
 		"github-slugger": "^2.0.0",
 		"mdast-util-from-markdown": "^2.0.1",
 		"mdast-util-gfm": "^3.0.0",
 		"mdast-util-to-string": "^4.0.0",
-		"micromark-extension-gfm": "^3.0.0"
+		"micromark-extension-gfm": "^3.0.0",
+		"micromark-util-types": "^2.0.0"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.2.5",
