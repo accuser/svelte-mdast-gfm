@@ -1,0 +1,13 @@
+.DS_Store
+.pnpm-store
+node_modules
+.pnpm-store
+.svelte-kit
+build
+dist/**/*.{spec,test}.*
+package
+.env
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
