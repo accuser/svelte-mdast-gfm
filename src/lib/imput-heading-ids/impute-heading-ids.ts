@@ -22,7 +22,7 @@ const visit = <T extends Node>(tree: Node, guard: TypeGuard<T>, visitor: (node: 
 	}
 };
 
-export default (({ prefix } = {}) => ({
+export const imputeHeadingIds = (({ prefix } = {}) => ({
 	transforms: [
 		(root) => {
 			const slugger = new GithubSlugger();

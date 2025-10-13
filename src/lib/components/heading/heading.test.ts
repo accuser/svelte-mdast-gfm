@@ -1,10 +1,12 @@
 import { mount, type ComponentProps } from 'svelte';
 import { beforeEach, describe, expect, test } from 'vitest';
-import Heading from './Heading.svelte';
+import Heading from './heading.svelte';
 
 describe('Heading.svelte', async () => {
 	beforeEach(() => {
-		document.body = document.createElement('body');
+		node: {
+			document.body = document.createElement('body');
+		}
 	});
 
 	for (const depth of [1, 2, 3, 4, 5, 6] as const) {

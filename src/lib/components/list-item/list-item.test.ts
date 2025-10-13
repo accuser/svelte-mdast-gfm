@@ -1,6 +1,6 @@
 import { mount, type ComponentProps } from 'svelte';
 import { beforeEach, describe, expect, test } from 'vitest';
-import ListItem from './ListItem.svelte';
+import ListItem from './list-item.svelte';
 
 describe('Heading.svelte', async () => {
 	beforeEach(() => {
@@ -12,18 +12,20 @@ describe('Heading.svelte', async () => {
 			props: ComponentProps<typeof ListItem>;
 		}>({
 			props: {
-				type: 'listItem',
-				children: [
-					{
-						type: 'paragraph',
-						children: [
-							{
-								type: 'text',
-								value: 'Hello, World!'
-							}
-						]
-					}
-				]
+				node: {
+					type: 'listItem',
+					children: [
+						{
+							type: 'paragraph',
+							children: [
+								{
+									type: 'text',
+									value: 'Hello, World!'
+								}
+							]
+						}
+					]
+				}
 			}
 		});
 
@@ -52,14 +54,16 @@ describe('Heading.svelte', async () => {
 				props: ComponentProps<typeof ListItem>;
 			}>({
 				props: {
-					type: 'listItem',
-					children: [
-						{
-							type: 'paragraph',
-							children: [{ type: 'text', value: 'Hello, World!' }]
-						}
-					],
-					checked
+					node: {
+						type: 'listItem',
+						children: [
+							{
+								type: 'paragraph',
+								children: [{ type: 'text', value: 'Hello, World!' }]
+							}
+						],
+						checked
+					}
 				}
 			});
 

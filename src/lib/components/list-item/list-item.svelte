@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { Node } from '@accuser/svelte-unist';
-	import type { ListItem } from 'mdast';
 
-	let { checked, children, spread }: ListItem = $props();
+	let { node }: { node: import('mdast').ListItem } = $props();
+
+	let { checked, children, spread } = $derived(node);
 </script>
 
 <li>
 	{#if typeof checked === 'boolean'}<input type="checkbox" {checked} disabled />{/if}
-	{#each children as node}<Node {...node} />{/each}
+	{#each children as child}<Node node={child} />{/each}
 </li>
